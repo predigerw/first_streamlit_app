@@ -35,8 +35,8 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header("Fruityvice Fruit Advice!")
 
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/Watermelon")
-streamlit.text(fruityvice_response.json())
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "Kiwi")
+#streamlit.text(fruityvice_response.json())  we don't need this anymore
 
 #now we normalize the view
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
